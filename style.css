@@ -1,13 +1,40 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@700&display=swap');
+
+
+.dropdown {
+  display: inline-block;
+  position: relative;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  width: 100%;
+  overflow: auto;
+  box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.4);
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.dropdown-content a {
+  display: block;
+  color: #000000;
+  padding: 5px;
+  text-decoration: none;
+}
+.dropdown-content a:hover {
+  color: #FFFFFF;
+  background-color: #00A4BD;
+}
+
+
 .img1{
 width: 320px;
 height: 240px;
 }
+
 .downloadbutton {
   background: rgb(0,0,0);
-  background: linear-gradient(90deg,rgba(0,0,0,1) 1%,rgb(24, 61, 0) 100%,rgb(25, 92, 45) 100%, rgba(47,74,29,1) 100%, rgba(47,74,29,1) 100%,rgb(99, 134, 0) 100%, rgb(65, 142, 46) 28%,rgb(4, 26, 0) 1%);
-  background-size: 100000% 400%;
-  border: none;
+ 
   color: white;
   padding: 16px 32px;
  
@@ -23,6 +50,15 @@ height: 240px;
   animation: gradient 5s ease infinite;
 }
 .downloadbutton:hover {opacity: 1}
+.fixed-bottom {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1030;
+ 
+}
+
 body {
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     
@@ -30,15 +66,15 @@ body {
     
     
     background: rgb(0,0,0);
-    background: linear-gradient(90deg, rgb(4, 26, 0) 1%, rgb(65, 142, 46) 28%,rgb(99, 134, 0) 100%, rgba(47,74,29,1) 100%, rgb(25, 92, 45) 100%, rgb(24, 61, 0) 100%, rgba(0,0,0,1) 1%); 
+    background: linear-gradient(0deg, rgb(4, 26, 0) 1%, rgb(65, 142, 46)); 
     
 
-    background-size: 100000% 400%;
+  
     padding-left: 25%;
     padding-right: 25%;
     color: white;
     text-align: center;
-    animation: gradient 15s ease infinite;
+  
 }
 @media only screen and (max-width: 50000px) {
   .hello{
@@ -140,4 +176,27 @@ a{
   background-color: #000000;
   color: white;
   opacity: 30%;
+}
+
+
+
+
+
+.custom-select {
+  min-width: 350px;
+}
+
+select {
+  appearance: none;
+  /* safari */
+  -webkit-appearance: none;
+  /* other styles for aesthetics */
+  width: 100%;
+  font-size: 1.15rem;
+  padding: 0.675em 6em 0.675em 1em;
+  background-color: #fff;
+  border: 1px solid #caced1;
+  border-radius: 0.25rem;
+  color: #000;
+  cursor: pointer;
 }
